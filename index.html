@@ -4,7 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <title>Side Menu</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#">
+          <i class="fas fa-bars fa-2x"></i>
+        </a>
+      </span>
+      <ul class="navbar-nav">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="side-nav" id="side-menu">
+      <a href="#" class="btn-close">&times;</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="" id="main">
+      <h1>Responsive side menu</h1>
+    </div>
+
+    <script>
+      document.querySelector(".open-slide").addEventListener("click", () => {
+        document.querySelector("#side-menu").style.width = "250px";
+        document.querySelector("#main").style.marginLeft = "250px";
+      });
+      document.querySelector(".btn-close").addEventListener("click", () => {
+        document.querySelector("#side-menu").style.width = "0";
+        document.querySelector("#main").style.marginLeft = "0";
+      });
+    </script>
+  </body>
 </html>
